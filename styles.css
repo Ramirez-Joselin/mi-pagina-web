@@ -1,0 +1,129 @@
+.hero-section {
+    position: relative;
+    height: 100vh;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100vh; /* Ajusta la altura para cubrir toda la vista */
+    object-fit: cover; /* Asegura que la imagen cubra todo el área sin deformarse */
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 0; /* Alinea a la izquierda */
+    transform: translateY(-50%); /* Ajusta la posición vertical para centrar */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 0 15px;
+    width: 50%; /* Ajusta el ancho según sea necesario */
+}
+
+.caption-text {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item-next .caption-text,
+.carousel-item-prev .caption-text,
+.carousel-item.active .caption-text {
+    opacity: 1;
+}
+
+/* Animación para el h1 */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.carousel-item-next .carousel-caption h1,
+.carousel-item-prev .carousel-caption h1,
+.carousel-item.active .carousel-caption h1 {
+    animation: fadeInUp 0.59s ease-in-out;
+    animation-delay: 0.5s; /* Retraso de 0.5 segundos antes de comenzar la animación */
+}
+
+.btn-custom {
+    background-color: #28a745;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+.highlight-section {
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+}
+
+.highlight-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.highlight-item {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.highlight-item img {
+    max-height: 300px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.footer-icons {
+    margin: 0.5rem 0;
+}
+
+.footer-icons a {
+    margin: 0 0.5rem;
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-icons a:hover {
+    color: #007bff;
+}
+
+/* Estilo para los botones de imagen en el carrusel */
+.carousel-buttons {
+    position: absolute;
+    bottom: 20px; /* Ajusta la distancia desde el fondo */
+    right: 10px; /* Ajusta la distancia desde el lado derecho */
+    display: flex;
+    /* Cambia de columna a fila */
+    gap: 10px; /* Espacio entre los botones */
+    justify-content: flex-end;
+}
+
+.carousel-buttons a {
+    display: block; /* Asegura que el enlace sea un bloque para manejar el tamaño */
+}
+
+.carousel-buttons img {
+    width: 250px; /* Tamaño más grande de las imágenes de los botones */
+    height: auto;
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+    border-radius: 5px; /* Opcional: añadir bordes redondeados a las imágenes */
+    transition: opacity 0.3s ease-in-out; /* Transición de opacidad al pasar el mouse */
+}
+
+.carousel-buttons img:hover {
+    opacity: 0.7; /* Reduce la opacidad al pasar el mouse sobre la imagen */
+}
+
